@@ -1,0 +1,59 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: oai-iperf
+  namespace: oai-cn5g
+  labels:
+    epc-mode: iperf
+    prometheus: oai-monitor
+spec:
+  selector:
+    epc-mode: iperf
+  ports:
+    - name: tcp-5001
+      protocol: TCP
+      port: 5001
+      targetPort: 5001
+    - name: udp-5001
+      protocol: UDP
+      port: 5001
+      targetPort: 5001
+---    
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: oai-iperf
+  namespace: oai-cn5g
+  labels:
+    epc-mode: pcf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      epc-mode: iperf
+  template:
+    metadata:   
+      labels:
+        epc-mode: iperf
+        prometheus: oai-monitor
+        version: 2.6.4
+        app: oai-iperf
+    spec:  
+      nodeSelector:
+        kubernetes.io/arch: amd64
+      containers: 
+        - name: iperf
+          image: mlabbe/iperf:latest  
+          ports:
+            - name: tcp-5001
+              protocol: TCP
+              containerPort: 5001
+            - name: udp-5001
+              protocol: UDP
+              containerPort: 5001
+          securityContext:
+            privileged: true
+            capabilities:
+              add: ["NET_ADMIN", "SYS_MODULE"]  
+          #command: ["/bin/iperf", "-s", "--histograms"]
+          command: ["iperf","-s","-p","5001"]

@@ -1,0 +1,48 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{},"labels":{"kubernetes.io/metadata.name":"open5gs","serviceMonitor":"prometheus"},"name":"cemenin"}}
+  creationTimestamp: "2024-10-29T20:39:44Z"
+  deletionTimestamp: "2024-10-31T23:09:19Z"
+  labels:
+    kubernetes.io/metadata.name: cemenin
+    serviceMonitor: prometheus
+  name: cemenin
+  resourceVersion: "1943343"
+  uid: f9eb85c4-efc6-46d0-8fb9-098cbfab4156
+spec:
+  finalizers:
+  - kubernetes
+status:
+  conditions:
+  - lastTransitionTime: "2024-10-31T23:09:25Z"
+    message: All resources successfully discovered
+    reason: ResourcesDiscovered
+    status: "False"
+    type: NamespaceDeletionDiscoveryFailure
+  - lastTransitionTime: "2024-10-31T23:09:25Z"
+    message: All legacy kube types successfully parsed
+    reason: ParsedGroupVersions
+    status: "False"
+    type: NamespaceDeletionGroupVersionParsingFailure
+  - lastTransitionTime: "2024-10-31T23:10:03Z"
+    message: 'Failed to delete all resource types, 1 remaining: unexpected items still
+      remain in namespace: cemenin for gvr: /v1, Resource=pods'
+    reason: ContentDeletionFailed
+    status: "True"
+    type: NamespaceDeletionContentFailure
+  - lastTransitionTime: "2024-10-31T23:09:25Z"
+    message: 'Some resources are remaining: persistentvolumeclaims. has 1 resource
+      instances, pods. has 5 resource instances'
+    reason: SomeResourcesRemain
+    status: "True"
+    type: NamespaceContentRemaining
+  - lastTransitionTime: "2024-10-31T23:09:25Z"
+    message: 'Some content in the namespace has finalizers remaining: kubernetes.io/pvc-protection
+      in 1 resource instances'
+    reason: SomeFinalizersRemain
+    status: "True"
+    type: NamespaceFinalizersRemaining
+  phase: Terminating

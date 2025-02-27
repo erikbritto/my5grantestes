@@ -6,7 +6,8 @@ from datetime import datetime
 import re
 import argparse
 
-prometeusUrl = "http://localhost:39461"
+#prometeusUrl = "http://localhost:39461"
+prometeusUrl = "http://10.103.184.3:443"
 
 # Função para converter timestamps UNIX em formato de data
 def timestamp_to_datetime(timestamp):

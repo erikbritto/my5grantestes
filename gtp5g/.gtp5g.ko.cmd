@@ -1,0 +1,1 @@
+cmd_/users/eriksilv/my5grantestes/gtp5g/gtp5g.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id  -T ./scripts/module-common.lds -o /users/eriksilv/my5grantestes/gtp5g/gtp5g.ko /users/eriksilv/my5grantestes/gtp5g/gtp5g.o /users/eriksilv/my5grantestes/gtp5g/gtp5g.mod.o;  true

@@ -1,0 +1,152 @@
+error: unable to forward port because pod is not running. Current status=Pending
+Traceback (most recent call last):
+  File "insereDados.py", line 87, in <module>
+    resultado = collection.insert_many(documentos)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/collection.py", line 975, in insert_many
+    blk.execute(write_concern, session, _Op.INSERT)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/bulk.py", line 736, in execute
+    return self.execute_command(generator, write_concern, session, operation)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/bulk.py", line 593, in execute_command
+    _ = client._retryable_write(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 1898, in _retryable_write
+    return self._retry_with_session(retryable, func, s, bulk, operation, operation_id)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 1784, in _retry_with_session
+    return self._retry_internal(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 1819, in _retry_internal
+    return _ClientConnectionRetryable(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 2662, in _write
+    self._server = self._get_server()
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 2645, in _get_server
+    return self._client._select_server(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 1649, in _select_server
+    server = topology.select_server(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/topology.py", line 398, in select_server
+    server = self._select_server(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/topology.py", line 376, in _select_server
+    servers = self.select_servers(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/topology.py", line 283, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/topology.py", line 333, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: 10.109.221.203:27017: timed out (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 67aa379c7688a88877153284, topology_type: Unknown, servers: [<ServerDescription ('10.109.221.203', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('10.109.221.203:27017: timed out (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+./connection_test.sh: line 75: kill: (499881) - No such process
+error: unable to forward port because pod is not running. Current status=Pending
+Traceback (most recent call last):
+  File "insereDados.py", line 87, in <module>
+    resultado = collection.insert_many(documentos)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/collection.py", line 975, in insert_many
+    blk.execute(write_concern, session, _Op.INSERT)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/bulk.py", line 736, in execute
+    return self.execute_command(generator, write_concern, session, operation)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/bulk.py", line 593, in execute_command
+    _ = client._retryable_write(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 1898, in _retryable_write
+    return self._retry_with_session(retryable, func, s, bulk, operation, operation_id)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 1784, in _retry_with_session
+    return self._retry_internal(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 1819, in _retry_internal
+    return _ClientConnectionRetryable(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 2662, in _write
+    self._server = self._get_server()
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 2645, in _get_server
+    return self._client._select_server(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 1649, in _select_server
+    server = topology.select_server(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/topology.py", line 398, in select_server
+    server = self._select_server(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/topology.py", line 376, in _select_server
+    servers = self.select_servers(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/topology.py", line 283, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/topology.py", line 333, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: 10.109.221.203:27017: timed out (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 67aa3dce847352abcbf3598b, topology_type: Unknown, servers: [<ServerDescription ('10.109.221.203', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('10.109.221.203:27017: timed out (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+./connection_test.sh: line 75: kill: (501746) - No such process
+error: unable to forward port because pod is not running. Current status=Pending
+Traceback (most recent call last):
+  File "insereDados.py", line 87, in <module>
+    resultado = collection.insert_many(documentos)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/collection.py", line 975, in insert_many
+    blk.execute(write_concern, session, _Op.INSERT)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/bulk.py", line 736, in execute
+    return self.execute_command(generator, write_concern, session, operation)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/bulk.py", line 593, in execute_command
+    _ = client._retryable_write(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 1898, in _retryable_write
+    return self._retry_with_session(retryable, func, s, bulk, operation, operation_id)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 1784, in _retry_with_session
+    return self._retry_internal(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 1819, in _retry_internal
+    return _ClientConnectionRetryable(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 2662, in _write
+    self._server = self._get_server()
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 2645, in _get_server
+    return self._client._select_server(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 1649, in _select_server
+    server = topology.select_server(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/topology.py", line 398, in select_server
+    server = self._select_server(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/topology.py", line 376, in _select_server
+    servers = self.select_servers(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/topology.py", line 283, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/topology.py", line 333, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: 10.109.221.203:27017: timed out (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 67aa4400f9e81e798d2ef62b, topology_type: Unknown, servers: [<ServerDescription ('10.109.221.203', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('10.109.221.203:27017: timed out (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+./connection_test.sh: line 75: kill: (503636) - No such process
+error: unable to forward port because pod is not running. Current status=Pending
+Traceback (most recent call last):
+  File "insereDados.py", line 87, in <module>
+    resultado = collection.insert_many(documentos)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/collection.py", line 975, in insert_many
+    blk.execute(write_concern, session, _Op.INSERT)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/bulk.py", line 736, in execute
+    return self.execute_command(generator, write_concern, session, operation)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/bulk.py", line 593, in execute_command
+    _ = client._retryable_write(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 1898, in _retryable_write
+    return self._retry_with_session(retryable, func, s, bulk, operation, operation_id)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 1784, in _retry_with_session
+    return self._retry_internal(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/_csot.py", line 119, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 1819, in _retry_internal
+    return _ClientConnectionRetryable(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 2554, in run
+    return self._read() if self._is_read else self._write()
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 2662, in _write
+    self._server = self._get_server()
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 2645, in _get_server
+    return self._client._select_server(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/mongo_client.py", line 1649, in _select_server
+    server = topology.select_server(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/topology.py", line 398, in select_server
+    server = self._select_server(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/topology.py", line 376, in _select_server
+    servers = self.select_servers(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/topology.py", line 283, in select_servers
+    server_descriptions = self._select_servers_loop(
+  File "/users/eriksilv/.local/lib/python3.8/site-packages/pymongo/synchronous/topology.py", line 333, in _select_servers_loop
+    raise ServerSelectionTimeoutError(
+pymongo.errors.ServerSelectionTimeoutError: 10.109.221.203:27017: timed out (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms), Timeout: 30s, Topology Description: <TopologyDescription id: 67aa4a32648f088be7a68554, topology_type: Unknown, servers: [<ServerDescription ('10.109.221.203', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('10.109.221.203:27017: timed out (configured timeouts: socketTimeoutMS: 20000.0ms, connectTimeoutMS: 20000.0ms)')>]>
+./connection_test.sh: line 75: kill: (505510) - No such process

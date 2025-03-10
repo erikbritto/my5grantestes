@@ -16,7 +16,7 @@ spec:
 
     storage: 100Mi
 
-  storageClassName: standard
+  storageClassName: manual
 
   hostPath:
 

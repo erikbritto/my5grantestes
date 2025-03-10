@@ -16,6 +16,7 @@ metadata:
   name: open5gs-mongodb
   namespace: cemenin
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: open5gs-mongodb
@@ -27,7 +28,8 @@ spec:
     spec:
       nodeSelector:
         kubernetes.io/arch: amd64
-        nodetype: server
+        kubernetes.io/hostname: worker1.helm16.ilabt-imec-be.wall2.ilabt.iminds.be
+        #nodetype: server
       containers:
       - image: free5gmano/nextepc-mongodb
         name: open5gs-mongodb
@@ -37,8 +39,8 @@ spec:
         #command: ["sleep", "1d"]
         volumeMounts:
         - name: mongodb-persistent-storage
-          mountPath: /data
+          mountPath: /data/db
       volumes:
       - name: mongodb-persistent-storage
         persistentVolumeClaim:
-          claimName: open5gs-mongodb-pv
+          claimName:  mongodb-pv-claim

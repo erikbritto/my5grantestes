@@ -8,18 +8,35 @@ metadata:
 
 spec:
 
+  storageClassName: "manual"
+
   accessModes:
 
-    - ReadWriteMany
+    - ReadWriteOnce
+  
+  #persistentVolumeReclaimPolicy: Retain
 
+  nodeAffinity:
+
+    required:
+
+      nodeSelectorTerms:
+
+      - matchExpressions:
+
+        - key: kubernetes.io/hostname
+
+          operator: In
+
+          values:
+
+          - worker1.helm16.ilabt-imec-be.wall2.ilabt.iminds.be  
+
+  persistentVolumeReclaimPolicy: Recycle
       
   capacity:
 
     storage: 100Mi
-
-    #storageclass.kubernetes.io/is-default-class: true
-
-  storageClassName: default
 
   hostPath:
 

@@ -4,7 +4,7 @@ from bson import Int64
 
 # Conexão com o servidor do MongoDB. Alterar a porta específica do serviço do MongoDB
 #client = pymongo.MongoClient("mongodb://localhost:63145/")
-client = pymongo.MongoClient("mongodb://10.103.207.173:27017/")
+client = pymongo.MongoClient("mongodb://10.101.156.84:27017/")
 
 # Acessa a base de dados e seleciona a coleção
 db = client["open5gs"]

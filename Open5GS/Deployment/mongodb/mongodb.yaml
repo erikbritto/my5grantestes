@@ -38,9 +38,9 @@ spec:
           name: mongodb
         #command: ["sleep", "1d"]
         volumeMounts:
-        - name: mongodb-persistent-storage
+        - name: mongodb-persistent-storage # open5gs-mongodb-pv 
           mountPath: /data/db
       volumes:
-      - name: mongodb-persistent-storage
+      - name: mongodb-persistent-storage #  open5gs-mongodb-pv 
         persistentVolumeClaim:
           claimName:  mongodb-pv-claim
